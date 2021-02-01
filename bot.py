@@ -22,7 +22,6 @@ async def send_welcome(message: types.Message):
 async def translate(message: types.Message):
     msg = message.text
     javob = lambda msg: to_cyrillic(msg) if msg.isascii() else to_latin(msg)
-
     await message.reply(javob(msg))
 
 
